@@ -1,0 +1,63 @@
+import java.util.Scanner;
+public class Main
+{
+    
+	public static void main(String[] args) {
+	    Scanner scanner = new Scanner(System.in);
+	
+	    int a2=0; int a5=0; int b2=0; int b5=0; int a=0; int b=0;
+      int m;
+	    
+	   
+	    System.out.println("Введите количество чисел: ");
+	    int n=scanner.nextInt();
+	    for(int i=1;i<=n; i++){
+	    System.out.println("Введите исходные данные: ");
+	    int x=scanner.nextInt();
+	    if(x%10=0) continue;  
+	   if(x%2=0){
+	        if(x>a2){
+	          b2=a;
+	          a2=x;}
+	          else if(x>b2)
+	              b2=x;
+	          }
+	          else if(x%5==0){
+	              if(x>a5){
+	                  b5=a5;
+	                  a5=x;
+	              }
+	              else if(x>b5)
+	                  b5=x;
+	              }
+	              else{
+	                  if(x>a){
+	                      b=a;
+	                      a=x;}
+	                      else if(x>b)
+	                          b=x;
+	                         
+	                      }
+	                  }
+	                  System.out.println("Введите контрольное значение")  ;
+	                 int contr=scanner.nextInt(); 
+	             
+	                 m= a*a2;
+	                 if(a*a5 > m)
+	                 m= a * a5;
+	                 if(a*b > m)
+	                 m = a * b;
+	                 if(a2*b2 > m)
+	                 m= a2*b2;
+	                 if(a5*b5 >m)
+	                 m = a5*b5;
+	                 System.out.println("Получено чисел  "+n);
+	                 System.out.println("Принятое контрольное значение"+contr);
+	                 if (m>0) 
+	                 System.out.println("Вычисленное контрольное значение"+ m);
+                   if (contr>0 && contr==m) 
+                   System.out.println("Контроль пройден");
+                   else 
+                   System.out.println("Контроль не пройден");
+	              }
+	   }
