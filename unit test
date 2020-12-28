@@ -3,7 +3,7 @@ import org.junit.Assert;
 public class MainTest {
 @org.junit.jupiter.api.Test
 void main() {
-Int a3=5; int a5=60; int b3=100; int b5=8; int a=9; 
+Int a2=5; int a5=60; int b2=100; int b5=8; int a=9; 
 int b=90;
 int m=800;	
  int test = TestingMain.test(a3);
@@ -28,7 +28,7 @@ static {
 public static void main(String[] args) {
     logger.log(Level.INFO, "Начало программы, присваивание значении для переменных");
 
- int a3;  a5;  b3;  b5;  a; b;  m; 
+ int a2;  a5;  b2;  b5;  a; b;  m; 
 logger.log(Level.INFO, "Присваивание значении для переменных"); 
 Int a2=5; a5=60; b2=100;  b5=8;  a=9; b=90;  m=800;
 test = TestingMain.test(a3);
@@ -43,7 +43,7 @@ test = TestingMain.test(a3);
             if (TestingMain(i) < R) {
                 logger.log(Level.INFO, "Условие { TestingMain(i) < test} верно ");
               
-                test = TestingMain.test(a3); 
+                test = TestingMain.test(a2); 
             }
         }
 
