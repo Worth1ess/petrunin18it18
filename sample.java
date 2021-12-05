@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
 
+
 public class Main extends Application {
 
 @Override
@@ -36,6 +37,8 @@ launch(args);
 
 }
 
+
+
 AuthorizationController.java
 
 package sample;
@@ -50,6 +53,9 @@ Controller.java import java.io.IOException; import java.net.URL; import java.uti
 
 loader.setLocation(getClass().getResource("/sample/Authorization.fxml")); try { loader.load(); } catch (IOException e) { e.printStackTrace(); } Parent root = loader.getRoot(); Stage stage = new Stage(); stage.setScene(new Scene(root)); stage.showAndWait(); }); applyReg.setOnAction(event1 -> { signUpNewUser(); }); } private void signUpNewUser() { applyReg.setText("Аккаунт успешно создан!"); DatabaseHandler dbHandler = new DatabaseHandler(); String Name = name.getText(); String Surname = surname.getText(); String Email = email.getText(); String Password = password.getText(); User user = new User(Name, Surname, Email, Password); dbHandler.signUpUser(user);
 
+
+
+
 ControllerAssortment.java
 
 package sample;
@@ -60,9 +66,15 @@ public class ControllerAssortment { @FXML private ResourceBundle resources; @FXM
 
 e.printStackTrace(); } Parent root = loader.getRoot(); Stage stage = new Stage(); stage.setScene(new Scene(root)); stage.showAndWait(); }); } }
 
+
+
+
 ControllerLastPage.java
 
 package sample; import java.io.IOException; import java.net.URL; import java.util.ResourceBundle; import javafx.fxml.FXML; import javafx.fxml.FXMLLoader; import javafx.scene.Parent; import javafx.scene.Scene; import javafx.scene.control.Button; import javafx.stage.Stage; public class ControllerLastPage { @FXML private ResourceBundle resources; @FXML private URL location; @FXML private Button Assortment; @FXML void initialize() { Assortment.setOnAction(event -> { Assortment.getScene().getWindow().hide(); FXMLLoader loader = new FXMLLoader(); loader.setLocation(getClass().getResource("/sample/Assortment.fxml")); try { loader.load(); } catch (IOException e) { e.printStackTrace(); } Parent root = loader.getRoot(); Stage stage = new Stage(); stage.setScene(new Scene(root)); stage.showAndWait(); }); } }
+
+
+
 
 DatabaseHandler.java
 
